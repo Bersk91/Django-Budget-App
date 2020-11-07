@@ -12,6 +12,12 @@ class AccountInfo(models.Model):
     def __str__(self):
         return self.username
 '''
+
+class Budget(models.Model):
+    limit = models.FloatField(default = 0.0)
+    saldo = models.FloatField(default = 0.0)
+    user_limit = models.ForeignKey(User, on_delete=models.CASCADE)
+
 class ExpenseInfo(models.Model):
     expense_name = models.CharField(max_length=20)
     cost = models.FloatField()

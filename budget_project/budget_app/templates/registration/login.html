@@ -5,7 +5,7 @@
 
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <title>Budget App</title>
+        <title>App Presupuesto</title>
         
        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -14,7 +14,7 @@
         
         <div class="section">
             <div class="container">
-                <h2 class="center">Please sign in to view your budget informtion.</h2>
+                <h2 class="center">Inicia sesion para revisar tu presupuesto</h2>
             </div>
         </div>
         <div class="section">
@@ -22,10 +22,10 @@
                 <form method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button class="btn waves-effect"type='submit'>Login</button>
+                    <button class="btn waves-effect"type='submit'>Iniciar</button>
                 </form>
                 <br>
-                Don't have an account?<a href='{% url "sign up" %}'><strong> Create one here.</strong></a>
+                Sin cuenta?<a href='{% url "sign up" %}'><strong> Crea una aqui.</strong></a>
             </div>
         </div>
 
